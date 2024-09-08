@@ -1,0 +1,38 @@
+Container Styles:
+
+.container: This block defines styles for the element with the class container.
+background: #b9802a;: This sets the background color of the container to a brownish orange (#b9802a).
+display: flex;: This sets the field to apply a flexbox layout.
+align-items: center;: This aligns the child elements of the box vertically in the middle.
+justify-content: center;: This aligns the child elements of the container horizontally inside the middle.
+
+Wrapper Styles:
+
+.wrapper: This block defines styles for the element with the class wrapper.
+user-select: none;: This prevents the user from selecting text within the wrapper element. This might be useful to avoid accidentally highlighting the displayed time.
+
+Time Display Styles:
+
+.wrapper .time: This block defines styles for the time element that is a child of the wrapper element.
+height: 100px;: This sets the peak of the time display to a hundred pixels.
+background: #c9b996;: This units the heritage coloration of the time content to a lighter brownish orange (#c9b996).
+display: flex;: This sets the time display to use a flexbox layout for positioning the child elements (hours, minutes, seconds, etc.).
+align-items: center;: This aligns the child elements of the time display vertically in the center.
+justify-content: center;: This aligns the child elements of the time display horizontally in the center.
+border-radius: 5px;: This adds a slight rounded corner effect (5px) to the time display.
+.wrapper .time span: This block defines styles for all span elements that are children of the time element. 
+those represent individual components of the displayed time (hours, minutes, seconds, milliseconds, colons).
+width: 100px;: This sets the width of on every occasion element to a hundred pixels.
+text-align: center;: This centers the text inside on every occasion element.
+font-size: 40px;: This sets the font size of the time to 40 pixels for a big and readable display.
+font-weight: 600;: This sets the font weight to bold (six hundred) for a thicker and extra outstanding display.
+letter-spacing: 1px;: This adds a moderate spacing (1px) among each character within the time display for higher readability.
+.time span.colon: This block overrides styles for span elements with the class colon. These represent the colons separating hours, minutes, and seconds.
+width: 10px;: This reduces the width of the colon elements to 10 pixels compared to the wider time elements (hours, minutes, seconds, milliseconds).
+.time span.ms-colon, .time span.milliseconds: This block applies styles to span elements with the classes ms-colon and milliseconds. These likely represent the colon and milliseconds part of the display.
+color: #9b7235;: This sets the color of the milliseconds display to a darker brownish orange (#9b7235). This might be used to differentiate milliseconds from the rest of the time.
+
+Button Styles:
+
+.container .buttons: This block defines styles for the buttons element that is a child of the container element.
+display: flex;: This sets the buttons element to use a flexbox layout for positioning the buttons.

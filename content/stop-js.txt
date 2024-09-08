@@ -1,0 +1,50 @@
+Variable Initialization:
+
+let hr = min = sec = ms = "0" + 0, startTimer;
+This line declares and initializes several variables:
+hr, min, sec, and ms: These variables store the time values (hours, minutes, seconds, milliseconds) as strings. They are initialized to "00" using a trick to ensure a leading zero for single-digit values. Adding 0 to a string converts it to a number, and then adding that number back to the string "0" prepends a zero if the original value was less than 10.
+startTimer: This variable will hold an identifier used to stop the timer later. It's initially undefined.
+Button References:
+
+const startBtn = document.querySelector(".start");
+This line finds the button element with the class start on the webpage and stores a reference to it in the constant startBtn.
+Similar lines are used for stopBtn (stop button) and resetBtn (reset button) to store references to their respective button elements.
+Event Listeners:
+
+startBtn.addEventListener("click", start);
+This line attaches an event listener to the startBtn button.
+The listener listens for the "click" event on the button.
+When the button is clicked, it calls the function named start.
+Similar lines are used for stopBtn (calling stop function) and resetBtn (calling reset function). This way, clicking the respective buttons triggers their corresponding functions.
+Functions:
+
+start() function:
+
+This feature is performed while the start button is clicked.
+startBtn.classList.add("active");: This line adds the class "active" to the startBtn element. This might be used with CSS to visually indicate the button is currently active (started).
+stopBtn.classList.remove("active");: This removes the "active" class from the stopBtn element. This might be used with CSS to visually indicate it's not active (stopped).
+startTimer = setInterval(() => { ... }, 10);
+This line sets up a timer using setInterval.
+setInterval takes two arguments: a function to call repeatedly and the time interval (in milliseconds) between calls.
+here, it calls an nameless feature (described the use of an arrow characteristic) each 10 milliseconds (1/100th of a 2nd).
+Inside the anonymous function:
+ms++: This increments the milliseconds by 1.
+ms = ms < 10 ? "0" + ms : ms;: This ensures a leading zero for milliseconds in the displayed time. If ms is less than 10, a zero is prepended.
+The logic then checks if ms reaches 100 (100 milliseconds):
+if (ms == 100) { ... }: If ms is 100, it increments the seconds (sec) by 1 and resets ms to "00".
+Similar logic is applied for sec reaching 60 (incrementing minutes and resetting seconds) and min reaching 60 (incrementing hours and resetting minutes).
+Each time a unit is incremented, leading zeros are ensured using the same logic as for milliseconds.
+putValue();: This line calls the putValue function to update the displayed time on the webpage, reflecting the changes in milliseconds, seconds, minutes, and hours.
+
+stop() function:
+
+This function is called when the stop button is clicked.
+startBtn.classList.remove("active");: This removes the "active" class from the start button.
+stopBtn.classList.add("active");: This adds the "active" magnificence to the stop button, possibly for visible remarks.
+clearInterval(startTimer);: This line is crucial. It stops the timer set up in the start function using clearInterval. It takes the identifier stored in startTimer (which holds the interval ID) and cancels the repeated execution of the anonymous function within startTimer. This effectively pauses the stopwatch.
+
+Reset() function:
+
+This function is called when the reset button is clicked.
+It resets the button styles and stops the timer similar to the stop function.
+Additionally, it resets the hr, min, `sec.
